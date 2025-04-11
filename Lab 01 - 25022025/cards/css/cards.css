@@ -1,8 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --text-primary: #383E50;
     --text-highlight: #2A79FF;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 *,
@@ -18,6 +26,8 @@ html, body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 img, picture, video, canvas, svg {
@@ -63,16 +73,20 @@ table {
 }
 
 .container .card {
-    height: 75%;
+    height: 80%;
     width: 18rem;
 
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    place-items: center;
     
     background: #fff;
+
+    border-radius: 4px;
+    
+    transition: 0.6s;
 }
 
 .container .card header {
@@ -82,11 +96,13 @@ table {
     align-items: center;
     justify-content: center;
 
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .container .card header h1 {
     font-size: 1.2rem;
+
+    color: var(--text-primary);
 }
 
 .container .card section {
@@ -118,4 +134,49 @@ table {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    color: var(--text-primary);
+}
+
+.container .card main ul li {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.container .card footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}
+
+.container .card footer button {
+  padding: .5rem 2.5rem;
+
+  border: 2px solid #2479FF;
+  border-radius: 4px;
+
+  color: #2479FF;
+
+  transition: 0.6s;
+}
+
+.container .card:hover {
+  transition: 0.6s;
+
+  scale: 1.1;
+
+  outline: 1px solid #FAB630;
+}
+
+.container .card:hover footer button {
+  background: #2479FF;
+
+  color: #eee;
+
+  transition: 0.6s;
 }
