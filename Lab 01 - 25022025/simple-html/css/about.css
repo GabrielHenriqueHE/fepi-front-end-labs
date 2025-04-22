@@ -133,3 +133,69 @@ footer img {
     float: right;
     margin: 0 0 10px 10px;
 }
+
+@media screen and (max-width: 767px) {
+    body {
+        width: auto;
+        margin: 0 20px;
+    }
+
+    body > header {
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 20px;
+    }
+
+    p {
+        padding: 0 15px;
+        text-indent: 15px;
+        text-align: justify;
+        line-height: 1.5em;
+    }
+
+    #centro-distribuicao {
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #familia-pelho {
+        float: none;
+
+        width: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #familia-pelho img {
+        width: 80%;
+    }
+
+    figure {
+        margin: 20px 0;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        width: auto;
+
+        margin: 0 20px;
+    }
+
+    body > header {
+        margin-top: 10px;
+    }
+}
