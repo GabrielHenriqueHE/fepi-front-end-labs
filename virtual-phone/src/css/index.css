@@ -1,0 +1,64 @@
+/* CSS Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+}
+
+html, body {
+    height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove estilos padrão de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove bordas e estilos de elementos de formulário */
+input, button, textarea, select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Configurações personalizadas */
+:root {
+    --background-primary: #eeeeee;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url(https://media.tenor.com/sFzfdn_jL4oAAAAM/pode-pode-pode-pode-pode-pode-sentar-emoji.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.container .phone-container {
+    height: 10rem;
+    width: 10rem;
+
+    background-color: var(--background-primary);
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
