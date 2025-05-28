@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* CSS Reset básico */
+/* Configurações personalizadas */
+:root {
+    --font-text: "Roboto", sans-serif;
+    --background-primary: #eeeeee;
+}
+
 *,
+h1, h2, h3, h4, h5, h6
 *::before,
 *::after {
     margin: 0;
@@ -10,9 +19,12 @@
 
 html, body {
     height: 100vh;
+    width: 100vw;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
+    background-color: black;
 }
 
 /* Remove estilos padrão de links */
@@ -29,28 +41,92 @@ input, button, textarea, select {
     outline: none;
 }
 
-/* Configurações personalizadas */
-:root {
-    --background-primary: #eeeeee;
-}
-
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 
-    background: url(https://media.tenor.com/sFzfdn_jL4oAAAAM/pode-pode-pode-pode-pode-pode-sentar-emoji.gif) no-repeat;
-    background-size: 100% 100%;
+    background: url(https://media.tenor.com/sFzfdn_jL4oAAAAM/pode-pode-pode-pode-pode-pode-sentar-emoji.gif);
+    background-repeat: repeat;
 }
 
-.container .phone-container {
-    height: 10rem;
-    width: 10rem;
+.container #phone-container {
+    height: 80%;
+    width: 30%;
 
-    background-color: var(--background-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    
+    background-color: rgb(15, 15, 15);
+
+    border-radius: 16px;
+}
+
+.container #phone-container .screen {
+    height: 100%;
+    width: 100%;
+
+    padding: .25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxnnPfDYLUxmiIkUoi6msZEqlPyztjQW_NA&s) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 12px;
+}
+
+.container #phone-container .display {
+    height: 2rem;
+    width: 100%;
+
+    background: black;
+
+    border-radius: 12px;
+}
+
+.container #phone-container .keyboard {
+    height: 70%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    
+}
+
+.container #phone-container .keyboard .keyboard-row {
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container #phone-container .keyboard .key {
+    height: 4rem;
+    width: 4rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.500);
+    border-radius: 100%;
+}
+
+.key:hover {
+    transition: 150ms;
+    cursor: pointer;
+
+    background-color: rgba(0, 0, 0, 0.350);
 }
 
 @media screen and (min-width: 768px) {
