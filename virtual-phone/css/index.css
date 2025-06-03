@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --font-family: "Roboto", sans-serif;
+  --background-color: #202020;
+  --button-color: #3e3e3e;
+  --button-border: #303030;
+  --button-hover: #4f4f4f;
+  --call-button: #34c759;
+  --delete-button: #ff3b30;
+  --text-color: #eeefff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-color);
+}
+
+.container {
+  width: 25rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  background-color: var(--background-color);
+}
+
+h1 {
+  margin: 1rem;  
+  
+  text-align: center;
+
+  color: var(--text-color);
+}
+
+.display {
+  height: 3rem;
+  width: 100%;
+  
+  margin-bottom: 2rem;
+  
+  font-size: 2rem;
+  text-align: center;
+
+  color: var(--text-color);
+  background-color: var(--button-color);
+  
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.keyboard {
+  width: 100%;
+  
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 1rem;
+}
+
+.keyboard .row {
+  display: flex;  
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.key {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: 1px solid var(--button-border);
+  border-radius: 50%;
+  
+  color: var(--text-color);
+  background-color: var(--button-color);
+  
+  font-size: 1.5rem;
+  
+  transition: background-color 0.2s;
+}
+
+.key:hover {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+.action-buttons {
+  margin: 1.5rem 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  gap: 2rem;
+}
+
+.call-button,
+.delete-button {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: none;
+  border-radius: 50%;
+
+  font-size: 1.75rem;
+  color: #ffffff;
+
+  transition: opacity 0.2s;
+}
+
+.call-button {
+  background-color: var(--call-button);
+}
+
+.delete-button {
+  background-color: var(--delete-button);
+}
+
+.call-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
