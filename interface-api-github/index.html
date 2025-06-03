@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Stats</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="container">
+        <header>
+          <div>
+            <input id="search-field" type="text" placeholder="Busque por um usuário" />
+            <button id="search-button">
+              <img src="https://img.icons8.com/?size=16&id=132&format=png&color=000000" alt="">
+            </button>
+          </div>
+        </header>
+        <div class="app">
+          <main>
+            <header>
+              <h1>Github Stats</h1>
+            </header>
+            <div class="pre-consult">
+              
+            </div>
+            <div id="data" class="hidden">
+              <section class="user-presentation">
+                <img
+                  id="user-profile-picture"
+                />
+                <p id="user-username"></p>
+              </section>
+              <section class="user-data">
+                <ul>
+                  <li>
+                    <span>Nome</span>
+                    <p id="user-profile-name" class="fade-in"></p>
+                  </li>
+                  <li>
+                    <span>Localização</span>
+                    <p id="user-profile-location" class="fade-in"></p>
+                  </li>
+                  <li>
+                    <span>Seguindo</span>
+                    <p id="user-profile-following" class="fade-in"></p>
+                  </li>
+                  <li>
+                    <span>Seguidores</span>
+                    <p id="user-profile-followers"class="fade-in"></p>
+                  </li>
+                  <li>
+                    <span>Biografia</span>
+                    <p id="user-profile-bio"class="fade-in"></p>
+                  </li>
+                </ul>
+              </section>
+              <div id="user-profile-link-button-container">
+                <button>
+                  <a>
+                    <img
+                      src="https://img.icons8.com/?size=24&id=62856&format=png&color=000000"
+                      alt=""
+                    />
+                    <span>Acessar perfil</span>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
