@@ -30,6 +30,8 @@ const fetchProfileData = async (username) => {
         userProfileFollowers.textContent = data.followers;
         userProfileBio.textContent = data.bio != null ? data.bio : "Não informado";
 
+        profileButton.setAttribute("href", data.html_url)
+
     }, 300);
 
 };
