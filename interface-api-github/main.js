@@ -1,5 +1,6 @@
 const searchField = document.querySelector("#search-field")
 const searchButton = document.querySelector("#search-button")
+const profileButton = document.querySelector("#profile-button")
 
 const BASE_URL = "https://api.github.com/users"
 
@@ -19,6 +20,8 @@ const fetchProfileData = async (username) => {
     dataRenderer.classList.remove("show");
 
     setTimeout(() => {
+        dataRenderer.classList.add("show");
+
         userProfilePicture.setAttribute("src", data.avatar_url);
         userProfileUsername.textContent = data.login;
         userProfileName.textContent = data.name;
@@ -27,8 +30,8 @@ const fetchProfileData = async (username) => {
         userProfileFollowers.textContent = data.followers;
         userProfileBio.textContent = data.bio != null ? data.bio : "Não informado";
 
-        dataRenderer.classList.add("show");
     }, 300);
+
 };
 
 

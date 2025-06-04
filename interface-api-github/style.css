@@ -113,31 +113,6 @@ input:focus {
     transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-                transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.scale-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-                transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.scale-in.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
-
 .container {
     height: 100%;
     width: 100%;
